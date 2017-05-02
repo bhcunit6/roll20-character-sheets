@@ -839,6 +839,8 @@
 <img class="divider" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-Demon/img/AF_Faith_Health_divide.png" style="width:850px;margin-top:10px;"> <!--Apoc Form/Faith/Health Picture-->
 <div class="sheet-col" style="width:270px; ">
     <textarea name="attr_ApocForm" style="width:260px; height:120px"></textarea>
+	<h3 style="display:inline">Click to manifest:</h3>
+    <button type='roll' name='roll_ApocFormroll' value='/em manifests their Apocalyptic Form\n/r {(@{Faith})d10s}>?{Difficulty|6}f1}\n'></button>
     <img class="section" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-Demon/img/other_traits.png"><!--Other Traits Picture-->
 	<div class="sheet-col" style="width:100px">
        
@@ -1029,7 +1031,7 @@
     			<option value="@{Courage}">Courage</option>
     			</select>
     			<h4  style="display:inline">vs. Torment</h4>
-        <button type='roll' name='roll_Kindness' value='/em battles with their Torment\n/r {(@{KindnessVirtue})d10s, (@{TormentPerm})d10s}kh1>?{Difficulty|8}f1'></button>
+        <button type='roll' name='roll_Kindness' value='/em battles with their Torment\n ?{Difficulty|8} &{template:default} {{name=Acts of Kindness}} {{Virtue Success=[[(@{KindnessVirtue})d10s>?{Difficulty}f1]] }} {{Torment Success=[[(@{TormentPerm})d10s>?{Difficulty}f1]] }}'></button>
        </div>
 
     <img class="section" src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/CWOD-Demon/img/willpower.png" style="margin-left:5px;"><!--Willpower Picture-->
